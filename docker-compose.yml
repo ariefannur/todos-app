@@ -14,10 +14,10 @@ services:
       DATABASE_HOST: "postgres"
     restart: always
   api:
-    image: simpletodos.azurecr.io/api:latest
-    # build:
-      # context: .
-      # dockerfile: Dockerfile
+    # image: simpletodos.azurecr.io/api:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     env_file:
       - .env
     environment:

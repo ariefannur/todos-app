@@ -6,13 +6,12 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/jackc/pgx"
+	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
 func main() {
 	// Connect to PostgreSQL
-
 	dbpool, err := pgxpool.NewWithConfig(context.Background(), Config())
 	if err != nil {
 		log.Fatal("Error while creating connection to the database!!")
