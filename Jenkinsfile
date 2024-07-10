@@ -12,12 +12,12 @@ pipeline {
     stages {
        stage('Build') {
             steps {
-                go build
+                sh 'go build'
             }
         }
         stage('Test') {
             steps {
-                go test -v
+                sh 'go test -v'
             }
         }
         stage('Deploy') {
