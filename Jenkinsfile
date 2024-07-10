@@ -1,6 +1,6 @@
 pipeline {
     agent any 
-    tools { go '1.19' }
+    tools { go 'go1.19' }
     environment {
         GO114MODULE = 'on'
         CGO_ENABLED = 0 
