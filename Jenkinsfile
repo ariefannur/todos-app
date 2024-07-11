@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'az login --service-principal -u $AZURE_CRED_CLIENT_ID -p $AZURE_CRED_CLIENT_SECRET -t $AZURE_CRED_TENANT_ID'
+                azCommands('servicePrincipalId', ['az login --service-principal -u $AZURE_CRED_CLIENT_ID -p $AZURE_CRED_CLIENT_SECRET -t $AZURE_CRED_TENANT_ID'])
             }
         }
     }
